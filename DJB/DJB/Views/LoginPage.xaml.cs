@@ -28,6 +28,6 @@ namespace DJB.Views
         private async void LblSignup_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new SignupPage());
-        }
+        } 
     }
 }
