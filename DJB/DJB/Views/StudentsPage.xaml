@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJB.Views.StudentsPage">
+    
+    
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3,0,3,0" WidthRequest="500" HorizontalOptions="Start" Padding="0">
+
+                <Grid HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="maxpuls.jpg" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" HeightRequest="130" HorizontalOptions="Start"/>
+                    <Label Text="+ Add New Student" Grid.Row="1" Grid.Column="2" TextDecorations="Underline" TextColor="Blue" HorizontalOptions="End"/>
+                    <Picker x:Name="studentPicker" Grid.Row="3" Grid.Column="2" HorizontalOptions="FillAndExpand" HeightRequest="45" VerticalOptions="End" Margin="0,0,0,6"/>
+                </Grid>
+
+                <Label Text="Personal Info" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0"/>
+                <Grid Margin="0" Padding="0,0,2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Full Name" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+                    <Entry Text="Max Puls" FontSize="Small" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" />
+                    
+                    <Label Text="Parent Name" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" />
+                    <Entry Text="" FontSize="Small" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
+                    
+                    <Label Text="Gender" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="genderPicker" FontSize="Small" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
+                    
+                    <Label Text="Date of Birth" Grid.Row="4" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <DatePicker FontSize="Small" Grid.Row="4" Grid.Column="2" />
+                    <Label Text="Age: 50" Grid.Row="4" Grid.Column="3" VerticalTextAlignment="Center" />
+                </Grid>
+
+                <Label Text="Contact Info" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0" TextColor="Black"/>
+                <Grid Margin="0" Padding="0,0,2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Email" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" />
+                    <Entry Text="mpuls@yahoo.com" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Street Address" Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center"/>
+                    <Entry Text="3415 136TH ST SW APT 1" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="City" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Everett" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="State" Grid.Row="4" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="statePicker" Grid.Row="4" Grid.Column="2" FontSize="Small"/>
+                    <Label Text="Zip" Grid.Row="4" Grid.Column="3" VerticalOptions="Center"/>
+                    <Entry Text="98201" Grid.Row="4" Grid.Column="4" FontSize="Small" WidthRequest="70" HorizontalOptions="Start"/>
+
+                    <Label Text="Phone Number" Grid.Row="5" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="(425) 239-4745" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Mobile Carrier" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="T-Mobile" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+
+                <Label Text="Dojo/Karate Info" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0" TextColor="Black"/>
+                <Grid Margin="0" Padding="0,0,2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Current Rank" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="rankPicker" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Small" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <ProgressBar Progress="0.3" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" ProgressColor="Black" HeightRequest="30" VerticalOptions="Center"/>
+                    
+                    <Label Text="Time spent in rank" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="monthsPicker" Grid.Row="3" Grid.Column="2" FontSize="Small" VerticalOptions="Center"/>
+                    <Label Text="months" Grid.Row="3" Grid.Column="3" VerticalTextAlignment="Center"/>
+
+                    <Label Text="Rank time requirement" Grid.Row="4" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Label Text="48 months" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" VerticalTextAlignment="Center"/>
+
+                    <Label Text="Nearest possible promotion" Grid.Row="5" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Label Text="8 months" Grid.Row="5" Grid.Column="2" VerticalOptions="Center"/>
+
+                    <Label Text="Date of last promotion" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <DatePicker Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Small" VerticalOptions="Center"/>
+
+                </Grid>
+
+                <Label Text="Requirements for promotion to next rank" VerticalOptions="Center" FontAttributes="Bold" Margin="5,8,0,0"/>
+                <ListView x:Name="RankReqListView" Margin="3,0,0,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Path=requirement}" VerticalTextAlignment="Center"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Grid Margin="0,7,0,0" Padding="0,0,2,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Outside Training" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Street fighter games" Grid.Row="1" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Outside Training" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Street fighter games" Grid.Row="2" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Medical" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Hip surgery" Grid.Row="3" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Monthly Rate" Grid.Row="4" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="$110" Grid.Row="4" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Payment Status" Grid.Row="5" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Up to date - autopay" Grid.Row="5" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Active" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Picker x:Name="activePicker" Grid.Row="6" Grid.Column="2" FontSize="Small"/>
+
+                    <Label Text="Comments" Grid.Row="7" Grid.Column="1" VerticalTextAlignment="Center"/>
+                    <Entry Text="Tough guy" Grid.Row="7" Grid.Column="2" FontSize="Small"/>
+                </Grid>
+
+                <Button Text="Save Changes" WidthRequest="120" HorizontalOptions="Center" 
+                        BackgroundColor="#fade6e" BorderColor="Orange" TextColor="Black" Margin="50"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

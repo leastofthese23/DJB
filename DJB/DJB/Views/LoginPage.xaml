@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJB.Views.LoginPage"
+             xmlns:local="clr-namespace:DJB.Controls">
+    
+    <ContentPage.Content>
+        <StackLayout WidthRequest="400" HorizontalOptions="Center" Margin="35">
+            <Image Source="djblogowithtext.png" Margin="30,30"></Image>
+            <!-- UserName -->
+            <Label Text="Username" HorizontalTextAlignment="Center" />
+            <StackLayout BackgroundColor="LightGray" Padding="1"  >
+                <local:TextEntry BackgroundColor="White" VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+            <!-- Password -->
+            <Label Text="Password" HorizontalTextAlignment="Center"/>
+            <StackLayout BackgroundColor="LightGray" Padding="1"  >
+                <local:TextEntry BackgroundColor="White" VerticalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Button x:Name="btnLogin" Text="Login" Margin="0,45,0,0" BackgroundColor="#f7ebeb" Clicked="BtnLogin_Clicked"/>
+            <local:ExtendedLabel x:Name="lblSignup" Text="Create account" HorizontalOptions="End" 
+                                 VerticalOptions="End" TextDecorations="Underline" TextColor="Blue" Clicked="LblSignup_Clicked">
+            </local:ExtendedLabel>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

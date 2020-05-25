@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJB.Views.AttendancePage">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                
+                <StackLayout Padding="15" WidthRequest="400" HorizontalOptions="Start">
+                    <DatePicker/>
+                    <Picker x:Name="studentPickerA" />
+                    <Button Text="Add" BackgroundColor="#fade6e" BorderColor="Orange" TextColor="Black" Padding="0"
+                             WidthRequest="100" HeightRequest="40" HorizontalOptions="End"/>
+                    <Picker x:Name="studentPickerR"/>
+                    <Button Text="Remove" BackgroundColor="#ff8f78" TextColor="Black" Padding="0"
+                            BorderColor="DarkRed" HeightRequest="40" WidthRequest="100" HorizontalOptions="End"/>
+                </StackLayout>
+                
+                <StackLayout Margin="15,0" HorizontalOptions="Start" WidthRequest="400">
+                    <Label Text="View Attendance" HorizontalTextAlignment="Center" FontAttributes="Bold" 
+                       FontSize="Medium" Margin="0,13" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Picker x:Name="yearPicker"/>
+                        <Picker x:Name="monthPicker"/>
+                    </StackLayout>
+                    <Picker x:Name="studentPickerV"/>
+                    <ListView x:Name="lvAttendance">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="1" Text="{Binding date}" />
+                                        <Label Grid.Column="2" Text="{Binding name}" Padding="10,0,0,0"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+    
+</ContentPage>

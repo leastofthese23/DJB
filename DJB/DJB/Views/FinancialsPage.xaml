@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DJB.Views.FinancialsPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" WidthRequest="500">
+                <Label Text="Income" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Margin="0" TextColor="Black"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--TODO: add info box, toast message about how numbers/input should be formatted.-->
+                    <Label Text="Income from monthly dues" Grid.Row="1" FontSize="Medium" />
+                    <Label x:Name="lblMonthlyDuesIncome" Text="1,050" Grid.Row="1" Grid.Column="2" FontSize="Medium" HorizontalOptions="Start" />
+                    <Entry Text="Income 2" Grid.Row="2" FontSize="Small" />
+                    <Entry Text="200" Grid.Row="2" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtIncome2" PropertyChanged="TxtIncome2_PropertyChanged"/>
+                    <Entry Text="Income 3" Grid.Row="3" FontSize="Small" />
+                    <Entry Text="0" Grid.Row="3" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtIncome3" PropertyChanged="TxtIncome3_PropertyChanged"/>
+                    <Entry Text="Income 4" Grid.Row="4" FontSize="Subtitle" />
+                    <Entry Text="0" Grid.Row="4" Grid.Column="2" FontSize="Subtitle" HorizontalOptions="Start" WidthRequest="70" x:Name="txtIncome4" PropertyChanged="TxtIncome4_PropertyChanged"/>
+                    <Entry Text="Income 5" Grid.Row="5" FontSize="Small" />
+                    <Entry Text="0" Grid.Row="5" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtIncome5" PropertyChanged="TxtIncome5_PropertyChanged"/>
+                    <Entry Text="Income 6" Grid.Row="6" FontSize="Small" />
+                    <Entry Text="0" Grid.Row="6" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtIncome6" PropertyChanged="TxtIncome6_PropertyChanged"/>
+                </Grid>
+                <Label Text="Expenses" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center" Margin="0,25,0,0" TextColor="Black"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="270" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Entry Text="Rent" Grid.Row="1" FontSize="Small"/>
+                    <Entry Text="900" Grid.Row="1" Grid.Column="2" FontSize="Small" HorizontalOptions="StartAndExpand" WidthRequest="70" x:Name="txtExpense1" PropertyChanged="TxtExpense1_PropertyChanged"/>
+                    <Entry Text="Expense 2" Grid.Row="2" FontSize="Small"/>
+                    <Entry Text="50" Grid.Row="2" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtExpense2" PropertyChanged="TxtExpense2_PropertyChanged"/>
+                    <Entry Text="Expense 3" Grid.Row="3" FontSize="Small"/>
+                    <Entry Text="0" Grid.Row="3" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtExpense3" PropertyChanged="TxtExpense3_PropertyChanged"/>
+                    <Entry Text="Expense 4" Grid.Row="4" FontSize="Small"/>
+                    <Entry Text="0" Grid.Row="4" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtExpense4" PropertyChanged="TxtExpense4_PropertyChanged"/>
+                    <Entry Text="Expense 5" Grid.Row="5" FontSize="Small"/>
+                    <Entry Text="0" Grid.Row="5" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtExpense5" PropertyChanged="TxtExpense5_PropertyChanged"/>
+                    <Entry Text="Expense 6" Grid.Row="6" FontSize="Small"/>
+                    <Entry Text="0" Grid.Row="6" Grid.Column="2" FontSize="Small" HorizontalOptions="Start" WidthRequest="70" x:Name="txtExpense6" PropertyChanged="TxtExpense6_PropertyChanged"/>
+                </Grid>
+                <Grid Margin="0,50,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Total Income:" Grid.Row="1" FontSize="Large"/>
+                    <Label x:Name="lblTotalIncome" Text="$1,250" Grid.Row="1" Grid.Column="2" FontSize="Large"/>
+                    <Label Text="Total Expenses:" Grid.Row="2" FontSize="Large"/>
+                    <Label x:Name="lblTotalExpenses" Text="$950" Grid.Row="2" Grid.Column="2" FontSize="Large"/>
+                    <Label Text="Profit:" Grid.Row="3" FontSize="Large"/>
+                    <Label x:Name="lblTotalProfit" Text="$300" Grid.Row="3" Grid.Column="2" TextColor="LightGreen" FontSize="Large"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
