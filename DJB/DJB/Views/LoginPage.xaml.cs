@@ -15,14 +15,17 @@ namespace DJB.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
-		}
 
-        private async Task BtnLogin_ClickedAsync(object sender, EventArgs e)
+        }
+
+      
+
+        private async void BtnLogin_ClickedAsync(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new AttendancePage());
         }
 
-        private async Task LblSignup_ClickedAsync(object sender, EventArgs e)
+        private async void LblSignup_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new SignupPage());
         }

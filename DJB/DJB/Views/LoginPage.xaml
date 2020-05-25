@@ -18,9 +18,9 @@
                 <local:TextEntry BackgroundColor="White" VerticalOptions="FillAndExpand" />
             </StackLayout>
 
-            <Button x:Name="btnLogin" Text="Login" Margin="0,45,0,0" BackgroundColor="#f7ebeb" Clicked="BtnLogin_Clicked"/>
+            <Button x:Name="btnLogin" Text="Login" Margin="0,45,0,0" BackgroundColor="#f7ebeb" Clicked="BtnLogin_ClickedAsync"/>
             <local:ExtendedLabel x:Name="lblSignup" Text="Create account" HorizontalOptions="End" 
-                                 VerticalOptions="End" TextDecorations="Underline" TextColor="Blue" Clicked="LblSignup_Clicked">
+                                 VerticalOptions="End" TextDecorations="Underline"  TextColor="Blue" Clicked="LblSignup_Clicked">
             </local:ExtendedLabel>
         </StackLayout>
     </ContentPage.Content>
